@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Languages taught in class:</h1>
+
+  <ul>
+    {% for language in languages %}
+      <li>{{ language }}</li>
+      <p><b>Description:</b>
+        {{ descriptions[language] }}
+      </p>
+    {% endfor %}
+  </ul>
+{% endblock %}

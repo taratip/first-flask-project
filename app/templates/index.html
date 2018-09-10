@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Welcome to the my first Flask project, {{ data['name'] }}</h1>
+  <h3>Current Location: </h3>
+  <span>{{ data['location'] }}</span>
+
+  <h4>Our Locations:</h4>
+  <ul>
+    {% for location in locations %}
+      <li>{{ location }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

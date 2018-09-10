@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Current class</h1>
+  <ul>
+    {% for k,v in persons.items() %}
+      {% if v['instructor'] %}
+        <li><b>{{ v['name'] }} is instructor</b></li>
+      {% else %}
+        <li>{{ v['name'] }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endblock %}
