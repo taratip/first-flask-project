@@ -17,7 +17,7 @@ def index():
 
 @app.route('/class')
 def class_data():
-    persons = {
+    person = {
         1: {
             'name': 'Connor',
             'instructor': True
@@ -44,7 +44,8 @@ def class_data():
         }
     }
 
-    return render_template('class.html', persons=persons)
+    facilities = ["Kitchenett", "Class rooms", "Living area", "Bathroom"]
+    return render_template('class.html', person=person, facilities=facilities)
 
 
 @app.route('/language')
